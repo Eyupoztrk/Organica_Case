@@ -15,6 +15,7 @@ public class PlayerGallery : MonoBehaviour
     public List<GameObject> Cars;
     public List<GameObject> AllCars;
     public int _carIndex;
+    public Transform stand;
 
 
     private void Start()
@@ -24,7 +25,12 @@ public class PlayerGallery : MonoBehaviour
 
     public void OpenGallery()
     {
-        Cars = player.Cars;
+        //Cars = player.Cars;
+
+        foreach (var item in player.Cars)
+        {
+            Cars.Add(Instantiate(item,stand.position,Quaternion.identity));
+        }
 
         foreach (var item in AllCars)
         {
