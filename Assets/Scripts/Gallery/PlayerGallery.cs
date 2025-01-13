@@ -12,7 +12,7 @@ public class PlayerGallery : MonoBehaviour
         instance = this;
     }
     public Player player;
-    private List<GameObject> Cars;
+    public List<GameObject> Cars;
     public List<GameObject> AllCars;
     public int _carIndex;
 
